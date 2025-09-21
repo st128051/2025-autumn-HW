@@ -1,0 +1,21 @@
+name: C++ Build
+
+on:
+  push:
+    branches: [ ci_test ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Build solution
+      run: msbuild MyApp.sln /p:Configuration=Debug
