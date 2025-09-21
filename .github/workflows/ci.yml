@@ -18,4 +18,4 @@ jobs:
       uses: microsoft/setup-msbuild@v1
 
     - name: Build solution
-      run: msbuild MyApp.sln /p:Configuration=Debug
+      run: msbuild HW1.sln /p:Configuration=Debug
