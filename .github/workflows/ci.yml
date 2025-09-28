@@ -18,4 +18,8 @@ jobs:
       uses: microsoft/setup-msbuild@v1
 
     - name: Build solution
-      run: msbuild HW1/HW1.sln /p:Configuration=Debug
+      run: |
+	msbuild HW1/HW1.sln /
+p:Configuration=Debug
+	msbuild HW2/HW2.sln /
+p:Configuration=Debug
