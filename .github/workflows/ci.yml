@@ -23,3 +23,6 @@ jobs:
 
       - name: Build HW2
         run: msbuild HW2/HW2.sln /p:Configuration=Debug
+
+      - name: Build HW3
+        run: msbuild HW3/HW3.sln /p:Configuration=Debug
