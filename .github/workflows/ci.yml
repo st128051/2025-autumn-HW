@@ -1,0 +1,43 @@
+name: C++ Build
+
+on:
+  push:
+    branches: [ ci_test ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+
+      - name: Setup NuGet
+        uses: nuget/setup-nuget@v2
+
+      - name: Restore NuGet packages for HW5
+        run: nuget restore HW5/HW5.sln
+
+      - name: Build HW1
+        run: msbuild HW1/HW1.sln /p:Configuration=Debug
+
+      - name: Build HW2
+        run: msbuild HW2/HW2.sln /p:Configuration=Debug
+
+      - name: Build HW3
+        run: msbuild HW3/HW3.sln /p:Configuration=Debug
+
+      - name: Build HW4
+        run: msbuild HW4/HW4.sln /p:Configuration=Debug
+
+      - name: Build HW6
+        run: msbuild HW6/HW6.sln /p:Configuration=Debug
+
+      - name: Build HW5
+        run: msbuild HW5/HW5.sln /p:Configuration=Debug
