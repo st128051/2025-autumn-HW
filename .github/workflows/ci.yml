@@ -32,3 +32,6 @@ jobs:
 
       - name: Build HW6
         run: msbuild HW6/HW6.sln /p:Configuration=Debug
+
+      - name: Build HW5
+        run: msbuild HW5/HW5.sln /p:Configuration=Debug

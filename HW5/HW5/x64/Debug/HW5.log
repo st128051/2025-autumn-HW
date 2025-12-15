@@ -1,0 +1,8 @@
+﻿  test hw3.cpp
+C:\Users\User\source\repos\HW5\HW5\test hw3.cpp(217,26): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "/test%20hw3.cpp")
+  
+C:\Users\User\source\repos\HW5\HW5\test hw3.cpp(218,27): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "/test%20hw3.cpp")
+  
+  HW5.vcxproj -> C:\Users\User\source\repos\HW5\x64\Debug\HW5.exe
